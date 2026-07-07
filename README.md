@@ -1,3 +1,8 @@
+<div align="center">
+  <img src="./assets/repo-banner.png" alt="30 Days of R Challenge Banner" width="100%" />
+  i will add this later
+</div>
+
 # 30-Days-Of-R
 
 | Day | Topic | Source Material |
