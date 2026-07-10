@@ -1,0 +1,9 @@
+# Run this inside your local R console to build the file for your repo:
+weather_matrix <- data.frame(
+  Country = rep(c("Kenya", "Norway", "Japan"), each = 4),
+  Quarter = rep(c("Q1", "Q2", "Q3", "Q4"), times = 3),
+  Avg_Temp_C = c(24, 22, 21, 23, -2, 8, 15, 3, 6, 18, 26, 12)
+)
+
+# Serialize and save directly to your data directory path
+saveRDS(weather_matrix, file = "data/global-weather.rds")
