@@ -1,0 +1,8 @@
+Day 3 Practice Challenge
+Test your mastery by tracking or extending the exercises written in script.R:
+
+Build a 4x4 matrix containing values 1:16, explicitly generated row-wise.
+
+Isolate and slice the exact inner 2x2 grid matrix (spanning rows 2 to 3 and columns 2 to 3).
+
+Generate a 2x2 identity matrix using diag(2) and perform true algebraic matrix multiplication against your isolated grid. Check if your final results match the original inner slice!
