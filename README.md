@@ -45,14 +45,38 @@ An executable .R script featuring documented sample code, deep-dive comments, an
 
 
 
-<div align="center">
-  <img src="./assets/repo-banner.png" alt="30 Days of R Challenge Banner" width="100%" />
-  i will add this later
-</div>
+## 🗺️ Repository Roadmap
 
-# 30-Days-Of-R
+The challenge is broken down into weekly thematic modules, with daily dedicated scripts and execution guides.
 
-| Day | Topic | Source Material |
-| :--- | :--- | :--- |
-| **Day 01** | System Setup & Console | [Start Day 01 🚀](./Week-1-Core-Fundamentals/Day-01-System-Setup/) |
-| **Day 02** | Variable Assignments | [Start Day 02 📊](./Week-1-Core-Fundamentals/Day-02-Variables/) |
+### 🔹 Week 1: Core Fundamentals & Data Structures
+* **Day 01:** Introduction to R, RStudio, Variable Assignment, and Primitive Data Types
+* **Day 02:** 1D Atomic Vectors, Type Coercion Rules, and Element-wise Math
+* **Day 03:** Multi-Dimensional Architectures (Matrices and Arrays) & Dimension Dropping
+* **Day 04:** Lists – The Heterogeneous Universal Containers
+* **Day 05:** Factors (Categorical Variables) & Data Frames (2D Structural Tables)
+* **Day 06 & 07:** *(Upcoming)* Basic Data Input / Output (I/O) Mechanics
+
+### 🔹 Week 2: Control Flow & Functional Programming
+* *Conditional Logic (`if`, `else`), Vectorized Loops (`ifelse`)*
+* *Writing Custom Functions, Lexical Scoping, and the `apply` family*
+
+### 🔹 Week 3: The Tidyverse Ecosystem
+* *Data Wrangling with `dplyr` and Tidying with `tidyr`*
+* *Data Visualization Engine: `ggplot2`*
+
+### 🔹 Week 4: Exploratory Data Analysis & Modeling
+* *Handling Missing Data, Statistical Summaries, Linear Regression, and Capstone Project* 
+
+
+
+
+
+
+### 🔹 Week 1: Core Fundamentals & Data Structures
+* **Day 01:** [Introduction to R, RStudio, Variable Assignment, and Primitive Data Types](./Week-1-Core-Fundamentals%20%26%20Data%20Structures/Day-1-Introduction-to-R/day_1_intro.R)
+* **Day 02:** [1D Atomic Vectors, Type Coercion Rules, and Element-wise Math](./Week-1-Core-Fundamentals%20%26%20Data%20Structures/Day-2-Vectors/day_2_vectors.R)
+* **Day 03:** [Multi-Dimensional Architectures (Matrices and Arrays) & Dimension Dropping](./Week-1-Core-Fundamentals%20%26%20Data%20Structures/Day-3-Matrices%20and%20Arrays/day_3_matrices_arrays.R)
+* **Day 04:** [Lists – The Heterogeneous Universal Containers](./Week-1-Core-Fundamentals%20%26%20Data%20Structures/Day-4-Lists/day_4_lists.R)
+* **Day 05:** Factors (Categorical Variables) & Data Frames (2D Structural Tables) *(Upcoming)*
+* **Day 06 & 07:** Basic Data Input / Output (I/O) Mechanics *(Upcoming)*
