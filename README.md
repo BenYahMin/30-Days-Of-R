@@ -13,7 +13,11 @@ The challenge is broken down into weekly thematic modules, with daily dedicated 
 
 ### Day 3: Multi-Dimensional Architectures (Matrices and Arrays) & Dimension Dropping
 
-### Day 4–7: (Upcoming) Lists, Factors, Data Frames, and Basic Data I/O
+### Day 4: Lists-The Universal Containers
+
+### Day 5: Factors (R's explicit tool for categorical variables) and Data Frames (the ultimate 2D structural table that underpins all data science workflows)
+
+### Day 6 $ 7: (Upcoming) Basic Data I/O
 
 ## 🔹 Week 2: Control Flow & Functional Programming
 Conditional Logic (if, else), Vectorized Loops (ifelse)
