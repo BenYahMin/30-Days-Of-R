@@ -40,7 +40,7 @@ Because a Data Frame is structurally an amalgamation of a Matrix and a List, you
 ---
 
 ## 🧪 Day 5 Practice Challenge
-Verify your comprehension by reviewing the automated script inside `day_5_factors_dataframes.R`:
+Verify your comprehension by reviewing the automated script inside `script.R`:
 1. **Structural Assembly:** Build an asset inventory table with explicit factor category assignments.
 2. **Feature Multiplication:** Create a dynamic computed vector calculation column directly inside the framework table.
 3. **Logical Extraction:** Pass a binary evaluation conditional rule (`== 0`) to extract isolated row slices safely.
@@ -48,11 +48,6 @@ Verify your comprehension by reviewing the automated script inside `day_5_factor
 ---
 
 ## 🚀 Week 1 Completed!
-Congratulations on finishing the Core Fundamentals & Data Structures module! You have successfully mastered:
-* Day 1: System Setup & Primitives
-* Day 2: 1D Atomic Vectors & Coercion
-* Day 3: Matrices, Arrays & Dimension Dropping
-* Day 4: Lists & Container Slicing
-* Day 5: Factors & Data Frames
+Congratulations on finishing the Core Fundamentals & Data Structures module!
 
-**Up Next for Week 2:** We enter **Control Flow & Functional Programming**, starting with writing vectorized conditionals (`ifelse`), logical looping structures, and custom operational scoping pipelines.
+**Up Next:** We enter **Control Flow & Functional Programming**, starting with writing vectorized conditionals (`ifelse`), logical looping structures, and custom operational scoping pipelines.
