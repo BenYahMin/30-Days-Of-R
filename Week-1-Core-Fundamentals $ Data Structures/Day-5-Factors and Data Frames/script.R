@@ -3,6 +3,7 @@
 # Course: 30-Days-Of-R
 # Description: Mastering R's explicit tool for categorical values (Factors) and 
 #              the ultimate 2D structural table (Data Frames) used in analytics.
+# Author: Benjamin Kithome
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
