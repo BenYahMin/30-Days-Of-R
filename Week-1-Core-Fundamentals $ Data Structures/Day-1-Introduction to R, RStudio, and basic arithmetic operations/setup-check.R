@@ -16,3 +16,4 @@ cat("📍 Operating System: ", os_system, "\n")
 cat("========================================\n")
 
 print("You are officially ready for Day 2! Clear your console and prepare for variables.")
+

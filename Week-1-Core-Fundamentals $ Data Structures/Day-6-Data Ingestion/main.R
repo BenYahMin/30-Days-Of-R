@@ -1,15 +1,14 @@
----
-
+#---
 ## 2. `data_ingestion.R`
 #This hands-on script generates a temporary mock dataset, guides the learner through reading and writing with Base R and tidyverse packages, and cleanup.
-
-#```R
 # ==========================================
 # Day 6: Data Ingestion (Reading and Writing)
+# Author: Benjamin Kithome
 # ==========================================
 
 # --- Step 1: Set Up & Helper Mock Data ---
 # Since we don't want to break paths, let's write a mock CSV locally to practice on.
+# One can always call a csv file with a filepath ill show at the bottom.
 dir.create("temp_data", showWarnings = FALSE)
 
 mock_data <- data.frame(
@@ -28,7 +27,7 @@ cat("✅ Mock data generated and saved to 'temp_data/employees.csv'\n")
 # --- Step 2: Ingestion using Base R ---
 cat("\n--- Loading data with Base R ---\n")
 
-# Read using read.csv
+# Read using read.csv as i said up there
 base_df <- read.csv("temp_data/employees.csv")
 
 # Inspect structure

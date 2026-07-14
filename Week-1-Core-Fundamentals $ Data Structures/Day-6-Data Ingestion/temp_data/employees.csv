@@ -1,0 +1,5 @@
+"Employee_ID","Name","Department","Salary","Join_Date"
+101,"Alice Jones","HR",62000,"2021-03-15"
+102,"Bob Smith","Engineering",85000,"2020-11-01"
+103,"Charlie Brown","Finance",NA,"2023-01-10"
+104,"Diana Prince","Engineering",95000,"2019-07-22"
