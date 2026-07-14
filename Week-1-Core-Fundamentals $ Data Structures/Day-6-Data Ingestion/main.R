@@ -1,5 +1,4 @@
-#---
-## 2. `data_ingestion.R`
+# `data_ingestion.R`
 #This hands-on script generates a temporary mock dataset, guides the learner through reading and writing with Base R and tidyverse packages, and cleanup.
 # ==========================================
 # Day 6: Data Ingestion (Reading and Writing)
