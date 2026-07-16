@@ -3,80 +3,39 @@ Welcome to my 30 Days of R repository! This project is a structured, daily codin
 
 The curriculum scales progressively—starting with foundational syntax, moving through multi-dimensional data structures, and advancing into functional programming, tidy data manipulation, and statistical modeling.
 
-# 🗺️ Repository Roadmap
-The challenge is broken down into weekly thematic modules, with daily dedicated scripts and execution guides.
+---
 
-## 🔹 Week 1: Core Fundamentals & Data Structures
-### Day 1: Introduction to R, RStudio, Variable Assignment, and Primitive Data Types
+## 🗺️ Progress Dashboard & Roadmap
 
-### Day 2: 1D Atomic Vectors, Type Coercion Rules, and Element-wise Math
+This interactive table tracks my daily progress. Click on any active day to view either the theoretical **Markdown Guide** or the raw, executable **R Script**.
 
-### Day 3: Multi-Dimensional Architectures (Matrices and Arrays) & Dimension Dropping
+| Day | Topic | Documentation | Code | Status |
+| :---: | :--- | :---: | :---: | :---: |
+| **01** | Introduction to R, RStudio, and basic arithmetic operations | [Notes](./Week-1-Core%20Fundamentals%20and%20data%20structures/Day01/-Introduction%20to%20R%2C%20RStudio%20adn%20basic%20arithmetic%20operations/README.md) | [script.R](./Week-1-Core%20Fundamentals%20and%20data%20structures/Day01/-Introduction%20to%20R%2C%20RStudio%20adn%20basic%20arithmetic%20operations/script.R) |  Completed |
+| **02** | Vectors: Creation, type coercion rules, and element-wise math | [Notes](./Week-1-Core%20Fundamentals%20and%20data%20structures/Day02/-Understanding%20Vectors%20creation%2C%20type%20coercion%20rules%2C%20and%20element-wise%20math/README.md) | [script.R](./Week-1-Core%20Fundamentals%20and%20data%20structures/Day02/-Understanding%20Vectors%20creation%2C%20type%20coercion%20rules%2C%20and%20element-wise%20math/script.R) |  Completed |
+| **03** | Multi-Dimensional Architectures (Matrices and Arrays) | [Notes](./Week-1-Core%20Fundamentals%20and%20data%20structures/Day03/-Matrices%20and%20Arrays/README.md) | [script.R](./Week-1-Core%20Fundamentals%20and%20data%20structures/Day03/-Matrices%20and%20Arrays/script.R) |  Completed |
+| **04** | Lists: The Heterogeneous Universal Containers | [Notes](./Week-1-Core%20Fundamentals%20and%20data%20structures/Day04/Lists-The%20universal%20containers/README.md) | [script.R](./Week-1-Core%20Fundamentals%20and%20data%20structures/Day04/Lists-The%20universal%20containers/script.R) |  Completed |
+| **05** | Factors & Dataframes (The core data science table structures) | [Notes](./Week-1-Core%20Fundamentals%20and%20data%20structures/Day05/-Factors%20and%20Dataframes/README.md) | [script.R](./Week-1-Core%20Fundamentals%20and%20data%20structures/Day05/-Factors%20and%20Dataframes/script.R) |  Completed |
+| **06** | Basic Data Ingestion & I/O Mechanics | [Notes](./Week-2-Wrangling/Day06_Data_Ingestion/README.md) | [script.R](./Week-2-Wrangling/Day06_Data_Ingestion/script.R) |  Completed |
+| **07** | Dplyr Basics: select(), filter(), and mutate() | [Notes](./Week-2-Wrangling/Day07_Dplyr_Basics/README.md) | [script.R](./Week-2-Wrangling/Day07_Dplyr_Basics/script.R) |  Completed |
+| **08** | Dplyr Aggregations: group_by(), summarise(), and count() | [Notes](./Week-2-Wrangling/Day08_Dplyr_Aggregations/README.md) | [script.R](./Week-2-Wrangling/Day08_Dplyr_Aggregations/script.R) |  Completed |
+| **09** | Tidy Reshaping (tidyr: pivot_longer, pivot_wider) | *Pending* | *Pending* | ⏳ Next Up |
+| **10** | Relational Joins (left_join, inner_join, etc.) | *Pending* | *Pending* | ⏳ Upcoming |
+| **11** | Text Manipulation (stringr) | *Pending* | *Pending* | ⏳ Upcoming |
+| **12** | Datetime Wrangling (lubridate) | *Pending* | *Pending* | ⏳ Upcoming |
+| **13-18** | Data Visualization & EDA (ggplot2, Polish, Facets) | *Pending* | *Pending* | ⏳ Upcoming |
+| **19-24** | Applied Statistics & Regression Modeling | *Pending* | *Pending* | ⏳ Upcoming |
+| **25-30** | Capstones & R Shiny Applications | *Pending* | *Pending* | ⏳ Upcoming |
 
-### Day 4: Lists-The Universal Containers
+---
 
-### Day 5: Factors (R's explicit tool for categorical variables) and Data Frames (the ultimate 2D structural table that underpins all data science workflows)
+## 🛠️ How to Use This Repo
+Each daily directory follows a strict layout containing:
+* **A detailed `README.md`** breaking down the daily theoretical concepts, core rules, and architectural pitfalls.
+* **An executable `.R` script** featuring documented sample code, deep-dive comments, and practice challenge solutions.
 
-### Day 6 $ 7: (Upcoming) Basic Data I/O
-
-## 🔹 Week 2: Control Flow & Functional Programming
-Conditional Logic (if, else), Vectorized Loops (ifelse)
-
-Writing Custom Functions, Lexical Scoping, and the apply family
-
-##🔹 Week 3: The Tidyverse Ecosystem
-Data Wrangling with dplyr and Tidying with tidyr
-
-Data Visualization Engine: ggplot2
-
-##🔹 Week 4: Exploratory Data Analysis & Modeling
-Handling Missing Data, Statistical Summaries, Linear Regression, and Capstone Project
-
-# 🛠️ How to Use This Repo
-Each directory follows a strict layout containing:
-
-A detailed README.md breaking down the daily theoretical concepts, core rules, and architectural pitfalls.
-
-An executable .R script featuring documented sample code, deep-dive comments, and practice challenge solutions.
-
-
-
-
-
-
-
-## 🗺️ Repository Roadmap
-
-The challenge is broken down into weekly thematic modules, with daily dedicated scripts and execution guides.
-
-### 🔹 Week 1: Core Fundamentals & Data Structures
-* **Day 01:** Introduction to R, RStudio, Variable Assignment, and Primitive Data Types
-* **Day 02:** 1D Atomic Vectors, Type Coercion Rules, and Element-wise Math
-* **Day 03:** Multi-Dimensional Architectures (Matrices and Arrays) & Dimension Dropping
-* **Day 04:** Lists – The Heterogeneous Universal Containers
-* **Day 05:** Factors (Categorical Variables) & Data Frames (2D Structural Tables)
-* **Day 06 & 07:** *(Upcoming)* Basic Data Input / Output (I/O) Mechanics
-
-### 🔹 Week 2: Control Flow & Functional Programming
-* *Conditional Logic (`if`, `else`), Vectorized Loops (`ifelse`)*
-* *Writing Custom Functions, Lexical Scoping, and the `apply` family*
-
-### 🔹 Week 3: The Tidyverse Ecosystem
-* *Data Wrangling with `dplyr` and Tidying with `tidyr`*
-* *Data Visualization Engine: `ggplot2`*
-
-### 🔹 Week 4: Exploratory Data Analysis & Modeling
-* *Handling Missing Data, Statistical Summaries, Linear Regression, and Capstone Project* 
-
-
-
-
-
-
-### 🔹 Week 1: Core Fundamentals & Data Structures
-* **Day 01:** [Introduction to R, RStudio, Variable Assignment, and Primitive Data Types](./Week-1-Core-Fundamentals%20%26%20Data%20Structures/Day-1-Introduction-to-R/day_1_intro.R)
-* **Day 02:** [1D Atomic Vectors, Type Coercion Rules, and Element-wise Math](./Week-1-Core-Fundamentals%20%26%20Data%20Structures/Day-2-Vectors/day_2_vectors.R)
-* **Day 03:** [Multi-Dimensional Architectures (Matrices and Arrays) & Dimension Dropping](./Week-1-Core-Fundamentals%20%26%20Data%20Structures/Day-3-Matrices%20and%20Arrays/day_3_matrices_arrays.R)
-* **Day 04:** [Lists – The Heterogeneous Universal Containers](./Week-1-Core-Fundamentals%20%26%20Data%20Structures/Day-4-Lists/day_4_lists.R)
-* **Day 05:** Factors (Categorical Variables) & Data Frames (2D Structural Tables) *(Upcoming)*
-* **Day 06 & 07:** Basic Data Input / Output (I/O) Mechanics *(Upcoming)*
+### Working with the code locally:
+To clone this repository and run the scripts in your R environment:
+```bash
+git clone [https://github.com/BenYahMin/30-Days-Of-R.git](https://github.com/BenYahMin/30-Days-Of-R.git)
+cd 30-Days-Of-R
