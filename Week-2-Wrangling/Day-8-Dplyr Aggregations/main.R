@@ -1,9 +1,4 @@
----
-
 ### File 2: `Day08/dplyr_aggregations.R`
-Create an R script named `dplyr_aggregations.R` containing highly educational code and exercises using R's built-in `mtcars` and `iris` datasets.
-
-```R
 # ==========================================
 # Day 8: dplyr Aggregations
 # 30 Days of R Challenge
