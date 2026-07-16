@@ -20,10 +20,10 @@ mixed_list <- list(
   char_string    = "Hello R",
   inner_matrix   = matrix(1:4, nrow = 2)
 )
-
+{
 print("The structural summary of our mixed list (str):")
 str(mixed_list) # str() is essential for viewing list hierarchies
-
+}
 
 # ------------------------------------------------------------------------------
 # 2. SUBSETTING PARADIGMS: THE SINGLE VS. DOUBLE BRACKET DILEMMA
@@ -31,17 +31,20 @@ str(mixed_list) # str() is essential for viewing list hierarchies
 print("--- 2. Subsetting Mechanics: [ vs [[ ---")
 
 # Rule 1: Single Brackets `[` always return a LIST (a smaller slice of the train).
+{
 list_slice <- mixed_list[1]
 print("Subsetting with single brackets [1]:")
 print(list_slice)
-print(paste("Class of [1]:", class(list_slice))) # Still a "list"
+print(paste("Class of [1] is:", class(list_slice))) # Still a "list"
+}
 
 # Rule 2: Double Brackets `[[` extract the ACTUAL CONTENT inside the container.
+{
 actual_content <- mixed_list[[1]]
 print("Extracting with double brackets [[1]]:")
 print(actual_content)
-print(paste("Class of [[1]]:", class(actual_content))) # Returns "integer" vector
-
+print(paste("Class of [[1]] is:", class(actual_content))) # Returns "integer" vector
+}
 
 # ------------------------------------------------------------------------------
 # 3. NAMED LISTS & THE `$` OPERATOR
@@ -67,6 +70,7 @@ developer_profile <- list(name = "Ben", language = "R")
 # Adding a new element to an existing list
 developer_profile$experience_years <- 3
 developer_profile[["status"]] <- "Learning"
+print(developer_profile) # status which is learning is added
 
 # Removing an element by assigning NULL
 developer_profile$status <- NULL
@@ -111,3 +115,4 @@ print(paste("Extracted Sample Sizes Mean:", calculated_mean))
 # 3. Extract the 'metric' parameter out of the nested configuration list.
 extracted_metric <- dataset_report$configuration$metric # or dataset_report[[3]][[1]]
 print(paste("Extracted Nested Metric:", extracted_metric))
+

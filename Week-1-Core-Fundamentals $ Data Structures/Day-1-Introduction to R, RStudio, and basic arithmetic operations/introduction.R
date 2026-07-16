@@ -117,6 +117,8 @@ final_balance <- principal * (1 + rate)^years
 print("--- DAY 1 CAPSTONE PORTFOLIO CALCULATION COMPLETE ---")
 print(final_balance) # Expected output: 11576.25
 
+# I will create a pdf for rules of naming a variable
+
 # ---------------------------------------------------------------------
 # END OF SCRIPT - Run line by line using [Ctrl + Enter] or [Cmd + Return]
 # =====================================================================

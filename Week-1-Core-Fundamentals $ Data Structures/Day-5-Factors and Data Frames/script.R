@@ -32,6 +32,7 @@ ordered_satisfaction <- factor(
 print("Ordinal Factor Output with Ordered Levels:")
 print(ordered_satisfaction)
 print(paste("Is it greater? Medium > Low:", ordered_satisfaction[1] > ordered_satisfaction[2])) # TRUE
+# write code here comparing the three levels
 
 
 # ------------------------------------------------------------------------------
