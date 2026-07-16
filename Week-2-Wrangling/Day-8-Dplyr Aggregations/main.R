@@ -7,6 +7,7 @@ Create an R script named `dplyr_aggregations.R` containing highly educational co
 # ==========================================
 # Day 8: dplyr Aggregations
 # 30 Days of R Challenge
+# Author: Benjamin Kithome
 # ==========================================
 
 # Load required libraries
