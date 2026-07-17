@@ -1,0 +1,76 @@
+# ==========================================
+# Day 9 Challenge: The Multi-City Weather Tracker
+# 30 Days of R Challenge
+# Author: Benjamin Kithome
+# ==========================================
+
+# ------------------------------------------
+# CHALLENGE PROMPT
+# ------------------------------------------
+# You receive an export from a regional weather network. The data is structurally 
+# messy: daily high/low temperatures are spread across wide columns, and a 
+# secondary dataset contains combined string fields that need unpacking.
+#
+# OBJECTIVES:
+# 1. Transform 'weather_wide' into a tidy long format with columns:
+#    'city', 'date', 'Max_Temp', and 'Min_Temp'.
+# 2. Add a column calculating the daily temperature spread (Max_Temp - Min_Temp).
+# 3. Separate the 'log_entry' column in 'station_alerts' into 'date', 
+#    'status_level', and 'event_type'.
+
+library(tidyverse)
+
+# --- Starter Code: Load Data ---
+
+weather_wide <- tibble(
+  city = c("Seattle", "Austin", "Boston"),
+  Max_Temp_July1 = c(75, 98, 82),
+  Min_Temp_July1 = c(56, 76, 64),
+  Max_Temp_July2 = c(78, 101, 80),
+  Min_Temp_July2 = c(54, 78, 62)
+)
+
+station_alerts <- tibble(
+  station_id = c("STN-001", "STN-002", "STN-003"),
+  log_entry = c("2026/07/15_WARN_HighWind", "2026/07/16_INFO_Clear", "2026/07/17_CRIT_HeatWave")
+)
+
+print("Initial Weather Data:")
+print(weather_wide)
+
+print("Initial Alert Logs:")
+print(station_alerts)
+
+# ------------------------------------------
+# YOUR CODE GOES HERE
+# ------------------------------------------
+
+
+
+
+# ==========================================
+# SOLUTIONS (Uncomment below to test)
+# ==========================================
+
+# # 1 & 2: Tidy the Weather Data and Calculate Spread
+# tidy_weather <- weather_wide %>%
+#   pivot_longer(
+#     cols = starts_with(c("Max", "Min")),
+#     names_to = c(".value", "date"),
+#     names_pattern = "(Max_Temp|Min_Temp)_(.*)"
+#   ) %>%
+#   mutate(temp_spread = Max_Temp - Min_Temp)
+# 
+# print("--- Solution: Tidy Weather ---")
+# print(tidy_weather)
+# 
+# # 3: Unpack the Alert Logs
+# tidy_alerts <- station_alerts %>%
+#   separate_wider_delim(
+#     cols = log_entry,
+#     delim = "_",
+#     names = c("date", "status_level", "event_type")
+#   )
+# 
+# print("--- Solution: Tidy Alerts ---")
+# print(tidy_alerts)
