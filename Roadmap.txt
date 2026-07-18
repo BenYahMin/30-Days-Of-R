@@ -1,0 +1,65 @@
+30-Days-Of-R/
+│
+├── .gitignore                      # Prevents committing temporary R/RStudio files
+├── LICENSE                         # Open-source license (e.g., MIT)
+├── README.md                       # The main dashboard showcasing my project
+│
+├── Week-1-Core Fundamentals and data structures/                # Phase 1: Core Fundamentals & Data Structures
+│   ├── Day01/-Introduction to R, RStudio adn basic arithmetic operations
+│   │   ├── script.R
+│   │   └── README.md
+│   ├── Day02/-Understanding Vectors creation, type coercion rules, and element-wise math
+│   │   ├── script.R
+│   │   └── README.md
+│   ├── Day03/-Matrices and Arrays
+│   │   ├── script.R
+│   │   └── README.md
+│   ├── Day04/Lists-The universal containers
+│   │   ├── script.R
+│   │   └── README.md
+│   └── Day05/-Factors and Dataframes
+│       ├── script.R
+│       └── README.md
+│          
+├── Week-2-Wrangling/             # Phase 2: Data Wrangling & The Tidyverse
+│   ├── Day06_Data_Ingestion/
+|   |   ├──main.R
+|   |   └──README.md
+│   ├── Day07_Dplyr_Basics/
+|   |   ├──main.R
+|   |   └──README.md
+│   ├── Day08_Dplyr_Aggregations/
+|   |   ├──main.R
+|   |   └──README.md
+│   ├── Day09_Tidy_Reshaping/
+|   |   ├──main.R
+|   |   └──README.md
+│   ├── Day10_Relational_Joins/
+|   |   ├──main.R
+|   |   └──README.md
+│   ├── Day11_Text_Manipulation/
+|   |   ├──main.R
+|   |   └──README.md
+│   └── Day12_Datetime_Wrangling/
+|       ├──main.R
+|       └──README.md
+│
+├── Day13-18_Visualization/         # Phase 3: Data Visualization & EDA
+│   ├── Day13_Ggplot_Foundations/
+│   ├── Day14_Visualizing_Distributions/
+│   ├── Day15_Polished_Plots/
+│   ├── Day16_Faceted_Visualizations/
+│   ├── Day17_Interactive_Charts/
+│   └── Day18_EDA_Project/
+│
+├── Day19-24_Applied_Stats/         # Phase 4: Applied Statistics & Modeling
+│   ├── Day19_Descriptive_Stats/
+│   ├── Day20_Hypothesis_Testing/
+│   ├── Day21_Anova_Models/
+│   ├── Day22_Simple_Regression/
+│   ├── Day23_Multiple_Regression/
+│   └── Day24_Logistic_Regression/
+│
+└── Day25-30_Capstones/             # Phase 5: Capstones & Web Applications
+    ├── Capstone01_Data_Story/
+    └── Capstone02_Shiny_App/
