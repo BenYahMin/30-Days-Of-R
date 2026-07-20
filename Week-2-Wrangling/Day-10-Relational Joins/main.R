@@ -11,14 +11,14 @@ library(dplyr)
 # A tibble of employees
 employees <- tibble(
   emp_id = c(1, 2, 3, 4, 5),
-  name = c("Alice", "Bob", "Charlie", "David", "Eva"),
+  name = c("Purity", "Cleopus", "Charlie", "Peace", "Eva"),
   dept_id = c(101, 102, 101, 103, NA)
 )
 
 # A tibble of departments
 departments <- tibble(
   dept_id = c(101, 102, 104),
-  dept_name = c("HR", "Engineering", "Marketing")
+  dept_name = c("Statistics", "Engineering", "Marketing")
 )
 
 print("--- Base Datasets ---")
@@ -81,7 +81,7 @@ print(anti_result)
 # Mocking a scenario where keys have different column names
 locations <- tibble(
   id = c(101, 102),
-  city = c("New York", "San Francisco")
+  city = c("Nairobi", "Mombasa")
 )
 
 diff_key_result <- departments %>% 
@@ -89,3 +89,4 @@ diff_key_result <- departments %>%
 
 print("--- Join with Different Key Names ---")
 print(diff_key_result)
+
