@@ -7,6 +7,7 @@
 # 1. Load the tidyverse (which includes dplyr) or just dplyr
 # install.packages("dplyr") # Uncomment if not installed
 library(dplyr)
+library(ggplot2) # Load ggplot to be able to work on msleep datatset alternatively load tidyverse only
 
 # We will use the built-in 'msleep' dataset (mammals sleep data)
 data("msleep")
@@ -80,3 +81,4 @@ sleep_summary <- msleep %>%
   arrange(desc(avg_sleep))
 
 print(sleep_summary)
+
