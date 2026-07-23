@@ -1,6 +1,6 @@
 # Day 15: Polished Plots in R
 
-Welcome to Day 15 of the 30 Days of R challenge! Today, we conclude Week 2 by exploring how to take functional charts and turn them into publication-ready, **Polished Plots** using `ggplot2`. Making data visualizations clear, readable, and aesthetically pleasing is a crucial communication skill for any data scientist.
+Welcome to Day 15 of the 30 Days of R challenge! Today, we explore how to take functional charts and turn them into publication-ready, **Polished Plots** using `ggplot2`. Making data visualizations clear, readable, and aesthetically pleasing is a crucial communication skill for any data scientist.
 
 ## Core Concepts Covered
 * **Ggplot Themes**: Utilizing built-in complete themes (`theme_minimal()`, `theme_classic()`, `theme_bw()`).
