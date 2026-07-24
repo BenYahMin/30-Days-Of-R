@@ -1,6 +1,6 @@
 # Day 16: Faceted Visualizations in R
 
-Welcome to Day 16 of the 30 Days of R challenge! Today, we kick off Week 3 by exploring **Faceted Visualizations** using `ggplot2`. Faceting (or paneling) allows you to split a single plot into multiple subplots based on one or more categorical variables. This is one of the most powerful tools for discovering hidden patterns or interactions across groups without cluttering a single canvas.
+Welcome to Day 16 of the 30 Days of R challenge! Today, we continue with Week 3 by exploring **Faceted Visualizations** using `ggplot2`. Faceting (or paneling) allows you to split a single plot into multiple subplots based on one or more categorical variables. This is one of the most powerful tools for discovering hidden patterns or interactions across groups without cluttering a single canvas.
 
 ## Core Concepts Covered
 * **`facet_wrap()`**: Wraps a 1D ribbon of panels into a 2D grid layout based on a single discrete variable.
