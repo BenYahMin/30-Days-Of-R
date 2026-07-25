@@ -1,7 +1,7 @@
 # ==========================================
 # 30 Days of R
 # Day 10: Relational Joins using dplyr
-# Authoe: Benjamin Kithome
+# Author: Benjamin Kithome
 # ==========================================
 
 # Load required library
