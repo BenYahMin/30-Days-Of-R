@@ -1,65 +1,57 @@
-30-Days-Of-R/
-│
-├── .gitignore                      # Prevents committing temporary R/RStudio files
-├── LICENSE                         # Open-source license (e.g., MIT)
-├── README.md                       # The main dashboard showcasing my project
-│
-├── Week-1-Core Fundamentals and data structures/                # Phase 1: Core Fundamentals & Data Structures
-│   ├── Day01/-Introduction to R, RStudio adn basic arithmetic operations
-│   │   ├── script.R
-│   │   └── README.md
-│   ├── Day02/-Understanding Vectors creation, type coercion rules, and element-wise math
-│   │   ├── script.R
-│   │   └── README.md
-│   ├── Day03/-Matrices and Arrays
-│   │   ├── script.R
-│   │   └── README.md
-│   ├── Day04/Lists-The universal containers
-│   │   ├── script.R
-│   │   └── README.md
-│   └── Day05/-Factors and Dataframes
-│       ├── script.R
-│       └── README.md
-│          
-├── Week-2-Wrangling/             # Phase 2: Data Wrangling & The Tidyverse
-│   ├── Day06_Data_Ingestion/
-|   |   ├──main.R
-|   |   └──README.md
-│   ├── Day07_Dplyr_Basics/
-|   |   ├──main.R
-|   |   └──README.md
-│   ├── Day08_Dplyr_Aggregations/
-|   |   ├──main.R
-|   |   └──README.md
-│   ├── Day09_Tidy_Reshaping/
-|   |   ├──main.R
-|   |   └──README.md
-│   ├── Day10_Relational_Joins/
-|   |   ├──main.R
-|   |   └──README.md
-│   ├── Day11_Text_Manipulation/
-|   |   ├──main.R
-|   |   └──README.md
-│   └── Day12_Datetime_Wrangling/
-|       ├──main.R
-|       └──README.md
-│
-├── Day13-18_Visualization/         # Phase 3: Data Visualization & EDA
-│   ├── Day13_Ggplot_Foundations/
-│   ├── Day14_Visualizing_Distributions/
-│   ├── Day15_Polished_Plots/
-│   ├── Day16_Faceted_Visualizations/
-│   ├── Day17_Interactive_Charts/
-│   └── Day18_EDA_Project/
-│
-├── Day19-24_Applied_Stats/         # Phase 4: Applied Statistics & Modeling
-│   ├── Day19_Descriptive_Stats/
-│   ├── Day20_Hypothesis_Testing/
-│   ├── Day21_Anova_Models/
-│   ├── Day22_Simple_Regression/
-│   ├── Day23_Multiple_Regression/
-│   └── Day24_Logistic_Regression/
-│
-└── Day25-30_Capstones/             # Phase 5: Capstones & Web Applications
-    ├── Capstone01_Data_Story/
-    └── Capstone02_Shiny_App/
+==============================================================================
+30 DAYS OF R: CHALLENGE ROADMAP & PROGRESS LOG
+==============================================================================
+
+[X] WEEK 1: CORE FUNDAMENTALS & DATA STRUCTURES
+------------------------------------------------------------------------------
+├── Day 01: Introduction & Basic Arithmetic Operations
+├── Day 02: Primitive Vectors & C-Combine Architectures
+├── Day 03: Multi-Dimensional Matrices
+├── Day 04: Data Frame Basics
+├── Day 05: Lists & Recursive Data Structures
+├── Day 06: Control Flow & Conditional Logic
+└── Day 07: Writing Custom Functions
+
+[X] WEEK 2: WRANGLING & DATA EXPLORATION
+------------------------------------------------------------------------------
+├── Day 08: Missing Data Handling
+├── Day 09: Reshaping & Pivoting
+├── Day 10: Relational Joins & Merges
+├── Day 11: Text Manipulation                 --> [Week-2-Wrangling\Day-11-Text Manipulation]
+├── Day 12: Datetime Wrangling                --> [Week-2-Wrangling\Day-12-Datetime Wrangling]
+
+[ ] WEEK 3: VISUALIZATION EXTENSIONS
+------------------------------------------------------------------------------
+├── Day 13: Ggplot Foundations                --> [Week-2-Wrangling\Day-13-Ggplot Foundations]
+├── Day 14: Visualizing Distributions         --> [Week-2-Wrangling\Day-14-Visualizing Distributions]
+├── Day 15: Polished Plots                    --> [Week-2-Wrangling\Day-15-Polished Plots]
+├── Day 16: Faceted Visualizations            --> [Week-2-Wrangling\Day-16-Faceted Visualizations]
+├── Day 17: Interactive Charts                --> [Week-3-Visualization\Day-17-Interactive Charts]
+└── Day 18: EDA Project                       --> [Week-2-Wrangling\Day-18-EDA Project]
+
+[ ] WEEK 4: APPLIED STATS
+------------------------------------------------------------------------------
+├── Day 19: Descriptive Stats                 --> [Week-4-Applied Stats\Day-19-Descriptive Stats]
+├── Day 20: Hypothesis Testing                --> [Week-4-Applied Stats\Day-20-Hypothesis Testing]
+├── Day 21: ANOVA Models                      --> [Week-4-Applied Stats\Day-21-ANOVA Models]
+├── Day 22: Simple Regression                 --> [Week-4-Applied Stats\Day-22-Simple Regression]
+├── Day 23: Multiple Regression               --> [Week-4-Applied Stats\Day-23-Multiple Regression]
+└── Day 24: Logistic Regression               --> [Week-4-Applied Stats\Day-24-Logistic Regression]
+
+[ ] WEEK 5: CAPSTONE PROJECTS
+------------------------------------------------------------------------------
+├── Capstone 1: Data Story                    --> [Week-5-Capstones\Capstone-1-Data Story]
+└── Capstone 2: Shiny App                     --> [Week-5-Capstones\Capstone-2-Shiny App]
+
+==============================================================================
+FILE INDEX & EXPECTED STRUCTURE PER TRACK
+==============================================================================
+Each active day directory expects the following baseline structure:
+  ├── README.md  (Theoretical summary, formulas, functions index, and tasks)
+  └── main.R     (Executable script file containing examples and mock data)
+  * Exception: Capstone 2 utilizes `app.R` for the Shiny engine instead of `main.R`.
+    and every last day of the week has a challenge file- challenge.txt
+
+==============================================================================
+End of Roadmap Log * Subject to revision
+==============================================================================
