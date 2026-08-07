@@ -32,12 +32,12 @@ This interactive table tracks my daily progress. Click on any active day to view
 | **18** | Exploratory Data Analysis (EDA) Capstone Project | [Notes](./Week-2-Wrangling/Day-18-EDA%20Project/README.md) | [main.R](./Week-2-Wrangling/Day-18-EDA%20Project/main.R) |  Completed |
 | **19** | Descriptive Statistics & Central Tendencies | [Notes](./Week-4-Applied%20Stats/Day-19-Descriptive%20Stats/README.md) | [main.R](./Week-4-Applied%20Stats/Day-19-Descriptive%20Stats/main.R) |  Completed |
 | **20** | Hypothesis Testing (T-Tests & Non-Parametric Checks) | [Notes](./Week-4-Applied%20Stats/Day-20-Hypothesis%20Testing/README.md) | [main.R](./Week-4-Applied%20Stats/Day-20-Hypothesis%20Testing/main.R) |  Completed |
-| **21** | ANOVA Models (Analysis of Variance & Tukey HSD) | [Notes](./Week-4-Applied%20Stats/Day-21-ANOVA%20Models/README.md) | [main.R](./Week-4-Applied%20Stats/Day-21-ANOVA%20Models/main.R) |  Tomorrow |
-| **22** | Simple Linear Regression (OLS Models) | [Notes](./Week-4-Applied%20Stats/Day-22-Simple%20Regression/README.md) | [main.R](./Week-4-Applied%20Stats/Day-22-Simple%20Regression/main.R) |  Pending |
-| **23** | Multiple Linear Regression & Adjusted R-Squared | [Notes](./Week-4-Applied%20Stats/Day-23-Multiple%20Regression/README.md) | [main.R](./Week-4-Applied%20Stats/Day-23-Multiple%20Regression/main.R) |  Pending |
-| **24** | Logistic Regression & Binary Classification GLMs | [Notes](./Week-4-Applied%20Stats/Day-24-Logistic%20Regression/README.md) | [main.R](./Week-4-Applied%20Stats/Day-24-Logistic%20Regression/main.R) |  Pending |
-| **25** | Capstone 1: Telling an End-to-End Data Story | [Notes](./Week-5-Capstones/Capstone-1-Data%20Story/README.md) | [main.R](./Week-5-Capstones/Capstone-1-Data%20Story/main.R) |  Pending |
-| **26** | Capstone 2: Interactive Web Applications via R Shiny | [Notes](./Week-5-Capstones/Capstone-2-Shiny%20App/README.md) | [app.R](./Week-5-Capstones/Capstone-2-Shiny%20App/app.R) |  Pending |
+| **21** | ANOVA Models (Analysis of Variance & Tukey HSD) | [Notes](./Week-4-Applied%20Stats/Day-21-ANOVA%20Models/README.md) | [main.R](./Week-4-Applied%20Stats/Day-21-ANOVA%20Models/main.R) |  Completed |
+| **22** | Simple Linear Regression (OLS Models) | [Notes](./Week-4-Applied%20Stats/Day-22-Simple%20Regression/README.md) | [main.R](./Week-4-Applied%20Stats/Day-22-Simple%20Regression/main.R) |  Completed |
+| **23** | Multiple Linear Regression & Adjusted R-Squared | [Notes](./Week-4-Applied%20Stats/Day-23-Multiple%20Regression/README.md) | [main.R](./Week-4-Applied%20Stats/Day-23-Multiple%20Regression/main.R) |  Completed |
+| **24** | Logistic Regression & Binary Classification GLMs | [Notes](./Week-4-Applied%20Stats/Day-24-Logistic%20Regression/README.md) | [main.R](./Week-4-Applied%20Stats/Day-24-Logistic%20Regression/main.R) |  Completed |
+| **25** | Capstone 1: Telling an End-to-End Data Story | [Notes](./Week-5-Capstones/Capstone-1-Data%20Story/README.md) | [main.R](./Week-5-Capstones/Capstone-1-Data%20Story/main.R) |  Completed |
+| **26** | Capstone 2: Interactive Web Applications via R Shiny | [Notes](./Week-5-Capstones/Capstone-2-Shiny%20App/README.md) | [app.R](./Week-5-Capstones/Capstone-2-Shiny%20App/app.R) |  Complted |
 
 ---
 
