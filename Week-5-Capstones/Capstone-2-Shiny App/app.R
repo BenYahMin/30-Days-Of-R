@@ -31,7 +31,7 @@ project_data <- tibble(
 # ------------------------------------------------------------------------------
 ui <- fluidPage(
   # Application theme styling and title
-  theme = shinytheme("minimal") %if% requireNamespace("shinythemes", quietly = TRUE),
+  theme = if (requireNamespace("shinythemes", quietly = TRUE)) shinythemes::shinytheme("paper") else NULL,
   titlePanel("Corporate Operations Efficiency Calculator"),
   
   sidebarLayout(
@@ -87,9 +87,9 @@ server <- function(input, output, session) {
   filtered_data <- reactive({
     project_data %>%
       filter(
-        department %in% input->selected_depts,
-        budget_thousand_usd >= input->budget_range[1],
-        budget_thousand_usd <= input->budget_range[2]
+        department %in% input$selected_depts,
+        budget_thousand_usd >= input$budget_range[1],
+        budget_thousand_usd <= input$budget_range[2]
       )
   })
   
