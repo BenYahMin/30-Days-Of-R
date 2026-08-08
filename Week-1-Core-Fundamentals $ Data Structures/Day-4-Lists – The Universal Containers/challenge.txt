@@ -1,8 +1,8 @@
 Day 4 Practice Challenge
-1. Verify your comprehension by reviewing or extending the tracking exercises inside day_4_lists.R:
+1. Create an R file and inside it:
 
-2. Construct a Nested Profile: Create a named list called dataset_report containing an analyst name string, an integer vector of sample sizes, and a nested configuration sub-list.
+- Construct a Nested Profile: Create a named list called dataset_report containing an analyst name string, an integer vector of sample sizes, and a nested configuration sub-list.
 
-3. Extract and Calculate: Isolate the sample sizes out of the container as a raw numeric vector and calculate its mean.
+-Extract and Calculate: Isolate the sample sizes out of the container as a raw numeric vector and calculate its mean.
 
-4. Deep Slicing: Write the correct double-bracket or configuration path chain to pull out an item buried deep inside the nested sub-list
+-Deep Slicing: Write the correct double-bracket or configuration path chain to pull out an item buried deep inside the nested sub-list

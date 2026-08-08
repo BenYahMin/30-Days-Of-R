@@ -2,9 +2,7 @@
 # PROJECT: 30 Days of R Analytics & Statistical Frameworks
 # MODULE:  Week 1 - Core Fundamentals & Data Structures
 # DAY 2:   Vector Architecture, Explicit Coercion, & Element-Wise Math
-# =====================================================================
 # AUTHOR:  Benjamin Mukungi
-# DATE:    July 2026
 # =====================================================================
 
 # ---------------------------------------------------------------------

@@ -1,0 +1,4 @@
+1. Construct a dataframe containing 4 columns: 
+   product_name, category (factor), unit_price, and inventory_count.
+2. Add a calculated column called 'total_asset_value' (unit_price * inventory_count)
+3. Use logical filtering to return rows where inventory_count is exactly 0 (Out of stock).

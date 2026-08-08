@@ -2,7 +2,6 @@
 # PROJECT: 30 Days of R Analytics & Statistical Frameworks
 # MODULE:  Week 1 - Core Fundamentals & Data Structures
 # DAY 1:   R Language Architecture, Basic Arithmetic, & Variable States
-# =====================================================================
 # AUTHOR:  Benjamin Kithome
 # DATE:    10, July 2026
 # =====================================================================
@@ -114,11 +113,11 @@ years     <- 3       # Total holding duration of assets (3-year horizon)
 final_balance <- principal * (1 + rate)^years
 
 # Step 3: Stream calculated state to the console interface
-print("--- DAY 1 CAPSTONE PORTFOLIO CALCULATION COMPLETE ---")
+print("--- DAY 1 COMPLETE ---")
 print(final_balance) # Expected output: 11576.25
 
-# I will create a pdf for rules of naming a variable
+# Equals sign could also be used to assign but i will explain why you should not use it.
 
-# ---------------------------------------------------------------------
+# =====================================================================
 # END OF SCRIPT - Run line by line using [Ctrl + Enter] or [Cmd + Return]
 # =====================================================================

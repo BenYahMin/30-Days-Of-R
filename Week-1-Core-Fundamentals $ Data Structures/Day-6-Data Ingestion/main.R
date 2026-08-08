@@ -1,4 +1,3 @@
-# `data_ingestion.R`
 #This hands-on script generates a temporary mock dataset, guides the learner through reading and writing with Base R and tidyverse packages, and cleanup.
 # ==========================================
 # Day 6: Data Ingestion (Reading and Writing)
@@ -8,6 +7,7 @@
 # --- Step 1: Set Up & Helper Mock Data ---
 # Since we don't want to break paths, let's write a mock CSV locally to practice on.
 # One can always call a csv file with a filepath ill show at the bottom.
+# We will also later work on a dataset but for now we will create a small of our own
 dir.create("temp_data", showWarnings = FALSE)
 
 mock_data <- data.frame(
@@ -73,7 +73,10 @@ if (!requireNamespace("readxl", quietly = TRUE)) {
 library(readxl)
 
 # (Instructional Example - excel files cannot be generated dynamically easily as pure text)
-# excel_df <- read_excel("temp_data/financials.xlsx", sheet = "Q1_Report")
+# Therefore create an Excel file called "financials.xlsx" then uncomment this next line of code.
+# Excel file "financials.xlsx" with a sheet "Q1_Report"
+
+# excel_df <- read_excel("financials.xlsx", sheet = "Q1_Report")
 
 
 # --- Step 6: Exporting/Writing Out Data ---
