@@ -1,76 +1,48 @@
-# ==========================================
-# Day 9 Challenge: The Multi-City Weather Tracker
-# 30 Days of R Challenge
-# Author: Benjamin Kithome
-# ==========================================
+====================================================================
+DAY 7 CHALLENGE: DATA TIDYING & RESHAPING WITH TIDYVERSE
+====================================================================
 
-# ------------------------------------------
-# CHALLENGE PROMPT
-# ------------------------------------------
-# You receive an export from a regional weather network. The data is structurally 
-# messy: daily high/low temperatures are spread across wide columns, and a 
-# secondary dataset contains combined string fields that need unpacking.
-#
-# OBJECTIVES:
-# 1. Transform 'weather_wide' into a tidy long format with columns:
-#    'city', 'date', 'Max_Temp', and 'Min_Temp'.
-# 2. Add a column calculating the daily temperature spread (Max_Temp - Min_Temp).
-# 3. Separate the 'log_entry' column in 'station_alerts' into 'date', 
-#    'status_level', and 'event_type'.
+OVERVIEW:
+In this exercise, you will tidy two messy datasets (`weather_wide` and `station_alerts`) using modern `tidyverse` reshaping functions.
 
-library(tidyverse)
+--------------------------------------------------------------------
+TASK 1: TIDY WEATHER DATA & CALCULATE TEMPERATURE SPREAD
+--------------------------------------------------------------------
+Target Dataset: `weather_wide`
 
-# --- Starter Code: Load Data ---
+1. Reshape the `weather_wide` dataset from wide to long format using `pivot_longer()`.
+2. Extract the column headers starting with "Max" and "Min" so that:
+   - Temperature values fall under two distinct metric columns: `Max_Temp` and `Min_Temp`.
+   - The embedded dates are extracted into a dedicated `date` column.
+3. Add a new calculated column named `temp_spread` which equals `Max_Temp` minus `Min_Temp`.
 
-weather_wide <- tibble(
-  city = c("Seattle", "Austin", "Boston"),
-  Max_Temp_July1 = c(75, 98, 82),
-  Min_Temp_July1 = c(56, 76, 64),
-  Max_Temp_July2 = c(78, 101, 80),
-  Min_Temp_July2 = c(54, 78, 62)
-)
+Expected Output Columns for `tidy_weather`:
+- station_id
+- date
+- Max_Temp
+- Min_Temp
+- temp_spread
 
-station_alerts <- tibble(
-  station_id = c("STN-001", "STN-002", "STN-003"),
-  log_entry = c("2026/07/15_WARN_HighWind", "2026/07/16_INFO_Clear", "2026/07/17_CRIT_HeatWave")
-)
+--------------------------------------------------------------------
+TASK 2: UNPACK STATION ALERT LOGS
+--------------------------------------------------------------------
+Target Dataset: `station_alerts`
 
-print("Initial Weather Data:")
-print(weather_wide)
+1. Inspect the `log_entry` column, which contains concatenated strings separated by underscores (e.g., "2026-08-01_HIGH_Overheat").
+2. Use `separate_wider_delim()` to split `log_entry` by the underscore ("_") delimiter into three new distinct columns:
+   - `date`
+   - `status_level`
+   - `event_type`
 
-print("Initial Alert Logs:")
-print(station_alerts)
+Expected Output Columns for `tidy_alerts`:
+- station_id
+- date
+- status_level
+- event_type
 
-# ------------------------------------------
-# YOUR CODE GOES HERE
-# ------------------------------------------
-
-
-
-
-# ==========================================
-# SOLUTIONS (Uncomment below to test)
-# ==========================================
-
-# # 1 & 2: Tidy the Weather Data and Calculate Spread
-# tidy_weather <- weather_wide %>%
-#   pivot_longer(
-#     cols = starts_with(c("Max", "Min")),
-#     names_to = c(".value", "date"),
-#     names_pattern = "(Max_Temp|Min_Temp)_(.*)"
-#   ) %>%
-#   mutate(temp_spread = Max_Temp - Min_Temp)
-# 
-# print("--- Solution: Tidy Weather ---")
-# print(tidy_weather)
-# 
-# # 3: Unpack the Alert Logs
-# tidy_alerts <- station_alerts %>%
-#   separate_wider_delim(
-#     cols = log_entry,
-#     delim = "_",
-#     names = c("date", "status_level", "event_type")
-#   )
-# 
-# print("--- Solution: Tidy Alerts ---")
-# print(tidy_alerts)
+--------------------------------------------------------------------
+SUBMISSION CHECKLIST:
+--------------------------------------------------------------------
+[ ] Both `tidy_weather` and `tidy_alerts` print clean, fully parsed tibbles.
+[ ] No column contains packed/delimited raw strings.
+[ ] `temp_spread` correctly reflects daily temperature variation.

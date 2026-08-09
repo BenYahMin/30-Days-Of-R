@@ -26,15 +26,19 @@ print(raw_orders)
 # ------------------------------------------------------------------------------
 # 2. Resilient Multi-Format Parsing
 # ------------------------------------------------------------------------------
-# We apply multiple fallback parsing orders to capture mixed formatting styles
-# and explicitly handle unparseable anomalies without breaking execution.
+# We apply multiple fallback parsing orders to capture mixed formatting styles.
+# quiet = TRUE suppresses warnings for known corrupt records that fail parsing.
 parsed_orders <- raw_orders %>%
   mutate(
     # Standardize mixed string fields into clean Date vectors
-    order_date = parse_date_time(order_date_raw, orders = c("ymd", "mdy", "dmy")),
+    order_date = parse_date_time(
+      order_date_raw, 
+      orders = c("ymd", "mdy", "dmy", "yBd", "yb d"),
+      quiet = TRUE
+    ),
     
     # Cast raw dispatch timestamps into unambiguous POSIXct date-time objects (UTC)
-    dispatch_time = ymd_hms(dispatch_raw, tz = "UTC")
+    dispatch_time = ymd_hms(dispatch_raw, tz = "UTC", quiet = TRUE)
   )
 
 cat("\n--- [STEP 2] Standardized Date-Time Profiles ---\n")
@@ -95,4 +99,3 @@ cat(sprintf("• Mean operational dispatch latency: %.2f hours\n",
 # ==============================================================================
 # End of Enhanced Day 12 Script
 # ==============================================================================
-

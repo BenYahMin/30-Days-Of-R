@@ -1,4 +1,3 @@
-### File 2: `Day08/dplyr_aggregations.R`
 # ==========================================
 # Day 8: dplyr Aggregations
 # 30 Days of R Challenge
@@ -86,3 +85,4 @@ iris_percentage <- iris %>%
 
 print("--- Sample of Grouped Mutate ---")
 print(head(iris_percentage, 10))
+
