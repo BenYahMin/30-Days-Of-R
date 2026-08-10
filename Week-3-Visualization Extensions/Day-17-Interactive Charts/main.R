@@ -84,7 +84,7 @@ static_line <- ggplot(timeline_data, aes(x = month, y = signups, group = tier, c
 interactive_line <- ggplotly(static_line)
 
 print("--- Launching Interactive Line Plot ---")
-# interactive_line
+print(interactive_line)
 
 # ==============================================================================
 # End of Day 17 Script

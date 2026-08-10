@@ -77,6 +77,11 @@ bar_chart <- ggplot(data = summary_data, aes(x = category, y = total_revenue, fi
 print("--- Displaying Bar Chart ---")
 print(bar_chart)
 
+# Visualization in three steps:
+#   1. Attach libraries.
+#   2. Import data.
+#   3. Render the visual.
+
 # ==============================================================================
 # End of Day 13 Script
 # ==============================================================================

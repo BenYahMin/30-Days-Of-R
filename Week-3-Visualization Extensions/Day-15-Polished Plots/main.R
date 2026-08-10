@@ -81,6 +81,8 @@ polished_scatter_plot <- ggplot(
 print("--- Rendering Polished Scatter Plot ---")
 print(polished_scatter_plot)
 
+# Later we will look into printing plots into pdfs
+
 # ==============================================================================
 # End of Day 15 Script
 # ==============================================================================

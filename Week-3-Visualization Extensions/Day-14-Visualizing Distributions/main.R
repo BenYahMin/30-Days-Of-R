@@ -82,6 +82,11 @@ box_plot <- ggplot(data = company_data, aes(x = department, y = performance_scor
 print("--- Displaying Box Plot ---")
 print(box_plot)
 
+# Visualization in three steps:
+#   1. Attach libraries.
+#   2. Import data.
+#   3. Render the visual. As said in yesterdays script.
+
 # ==============================================================================
 # End of Day 14 Script
 # ==============================================================================
