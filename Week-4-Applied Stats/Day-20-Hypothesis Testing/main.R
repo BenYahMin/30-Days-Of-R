@@ -1,6 +1,7 @@
 # ==============================================================================
 # Day 20: Hypothesis Testing
 # 30-Days-Of-R
+# Author: Benjamin Kithome
 # ==============================================================================
 
 # Load required libraries
@@ -78,7 +79,3 @@ hypothesis_viz <- ggplot(ab_test_data, aes(x = spend, fill = layout)) +
 
 print("--- Step 4: Generating Validation Plot ---")
 print(hypothesis_viz)
-
-# ==============================================================================
-# End of Day 20 Script
-# ==============================================================================

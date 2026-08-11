@@ -1,78 +1,52 @@
 # ==============================================================================
 # Day 21: ANOVA Models
 # 30-Days-Of-R
+# Author: Benjamin Kithome
 # ==============================================================================
 
-# Load required libraries
 library(tidyverse)
 
-# Set seed for reproducible data generation
-set.seed(404)
+# Load dataset. We are going to use an in-built dataset here.
+# Context: Evaluating dried yield weight across control and two treatment conditions.
+# Determine if treatment type significantly impacts plant yield weight.
+plant_df <- as_tibble(PlantGrowth)
 
-# ------------------------------------------------------------------------------
-# 1. Setup Mock Dataset
-# ------------------------------------------------------------------------------
-# Context: Evaluating website loading speeds across three distinct hosting providers.
-# Task: Determine if the choice of hosting provider significantly affects load times.
-n_per_group <- 35
-hosting_experiment <- tibble(
-  provider = rep(c("Provider_A", "Provider_B", "Provider_C"), each = n_per_group),
-  # Simulating variance: Provider B is faster on average
-  load_time = c(
-    rnorm(n_per_group, mean = 2.4, sd = 0.4),  # Provider A
-    rnorm(n_per_group, mean = 1.9, sd = 0.3),  # Provider B
-    rnorm(n_per_group, mean = 2.5, sd = 0.5)   # Provider C
-  )
-) %>%
-  mutate(provider = as.factor(provider)) # Ensure the grouping variable is a factor
-
-print("--- Step 1: Experimental Data Summary ---")
-hosting_experiment %>%
-  group_by(provider) %>%
+print("Experimental Data Summary")
+plant_summary <- plant_df %>%
+  group_by(group) %>%
   summarise(
     sample_size = n(),
-    mean_speed = mean(load_time),
-    sd_speed = sd(load_time),
-    .groups = "drop"
-  ) %>%
-  print()
+    mean_weight = mean(weight),
+    sd_weight   = sd(weight),
+    .groups     = "drop"
+  )
 
-# ------------------------------------------------------------------------------
-# 2. Fit One-Way ANOVA Model
-# ------------------------------------------------------------------------------
-# H0: Mean_A = Mean_B = Mean_C | H1: At least one group mean is different
-anova_model <- aov(load_time ~ provider, data = hosting_experiment)
+print(plant_summary)
 
-print("--- Step 2: ANOVA Table Summary ---")
+# Hypothesis:
+# H0: Mean_ctrl = Mean_trt1 = Mean_trt2 | H1: At least one group mean differs
+anova_model <- aov(weight ~ group, data = plant_df)
+
+print("ANOVA Table Summary")
 print(summary(anova_model))
 
-# ------------------------------------------------------------------------------
-# 3. Post-Hoc Pairwise Comparisons (Tukey's HSD)
-# ------------------------------------------------------------------------------
-# Task: If the overall ANOVA is significant, run Tukey's test to pinpoint differences.
-print("--- Step 3: Tukey Honest Significant Difference Test ---")
+# Task: Pinpoint which specific treatment groups differ significantly.
+print("Tukey Honest Significant Difference Test")
 tukey_results <- TukeyHSD(anova_model)
 print(tukey_results)
 
-# ------------------------------------------------------------------------------
-# 4. Exploratory Distribution Audit
-# ------------------------------------------------------------------------------
-# Task: Create a box plot with overlaying group means to visually back up the numbers.
-anova_viz <- ggplot(hosting_experiment, aes(x = provider, y = load_time, fill = provider)) +
+# Task: Visualize yield distributions with group mean overlays (black diamonds).
+anova_viz <- ggplot(plant_df, aes(x = group, y = weight, fill = group)) +
   geom_boxplot(alpha = 0.7, show.legend = FALSE) +
   stat_summary(fun = mean, geom = "point", shape = 18, size = 4, color = "black") +
   theme_minimal() +
   scale_fill_brewer(palette = "Set2") +
   labs(
-    title = "Website Loading Speeds by Hosting Provider",
-    subtitle = "Black diamonds represent the group means evaluated via ANOVA",
-    x = "Hosting Provider",
-    y = "Page Load Time (Seconds)"
+    title    = "Plant Yield Weight by Experimental Condition",
+    subtitle = "Black diamonds represent group means evaluated via one-way ANOVA",
+    x        = "Experimental Group",
+    y        = "Dried Weight (Units)"
   )
 
-print("--- Step 4: Rendering Experimental Box Plot ---")
+print("Experimental Box Plot")
 print(anova_viz)
-
-# ==============================================================================
-# End of Day 21 Script
-# ==============================================================================

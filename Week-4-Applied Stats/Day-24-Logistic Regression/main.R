@@ -1,82 +1,84 @@
 # ==============================================================================
-# Day 24: Logistic Regression
+# Day 24: Logistic Regression & Binary Classification Pipeline
 # 30-Days-Of-R
 # Author: Benjamin Kithome
 # ==============================================================================
 
-# Load required libraries
 library(tidyverse)
+library(broom)
 
-# Set seed for reproducible data generation
-set.seed(707)
+# Let us use built-in dataset: mtcars
+# Predicting vehicle transmission type (0 = Automatic, 1 = Manual)
+# based on vehicle weight (wt) and horsepower (hp).
+data("mtcars")
 
-# ------------------------------------------------------------------------------
-# 1. Setup Mock Dataset
-# ------------------------------------------------------------------------------
-# Context: Predicting subscription churn (1 = Churned, 0 = Retained) 
-# based on customer support calls and monthly platform usage hours.
-n_subscribers <- 100
-subscription_data <- tibble(
-  subscriber_id = 1:n_subscribers,
-  usage_hours = runif(n_subscribers, min = 5, max = 50),
-  support_calls = rpois(n_subscribers, lambda = 2)
-) %>%
+cars_df <- as_tibble(mtcars, rownames = "car_model") %>%
+  select(car_model, am, wt, hp, mpg) %>%
   mutate(
-    # Log-odds calculation: Higher usage decreases churn probability; more support calls increase it
-    log_odds = 0.5 - (0.12 * usage_hours) + (0.75 * support_calls),
-    probability = 1 / (1 + exp(-log_odds)),
-    # Assign binomial outcomes based on probability thresholds
-    has_churned = if_else(runif(n_subscribers) < probability, 1, 0)
-  ) %>%
-  select(-log_odds, -probability)
-
-print("--- Step 1: Subscriber Churn Dataset Profile ---")
-print(head(subscription_data))
-
-# ------------------------------------------------------------------------------
-# 2. Fit Logistic Regression Model (GLM)
-# ------------------------------------------------------------------------------
-# Formula structure: Binary Out ~ Predictors | Critical: family = binomial
-logistic_model <- glm(has_churned ~ usage_hours + support_calls, 
-                      family = binomial, 
-                      data = subscription_data)
-
-print("--- Step 2: Logistic Regression GLM Model Summary ---")
-print(summary(logistic_model))
-
-# ------------------------------------------------------------------------------
-# 3. Transform Coefficients (Odds Ratios & Probabilities)
-# ------------------------------------------------------------------------------
-# Task: Convert raw model log-odds into explicit odds ratios for clean interpretation.
-log_odds_coefs <- coef(logistic_model)
-odds_ratios <- exp(log_odds_coefs)
-
-print("--- Step 3: Extracted Odds Ratios ---")
-print(odds_ratios)
-# Note: An odds ratio > 1 implies increased likelihood of churn per unit increment.
-
-# ------------------------------------------------------------------------------
-# 4. Generate Predictions & Classification Thresholds
-# ------------------------------------------------------------------------------
-# Task: Append computed probability vectors back to the dataset and apply a 0.50 cutoff filter.
-evaluation_data <- subscription_data %>%
-  mutate(
-    # type = "response" guarantees output scales between 0 and 1
-    predicted_prob = predict(logistic_model, type = "response"),
-    # Assign prediction flag
-    predicted_class = if_else(predicted_prob >= 0.50, 1, 0)
+    transmission = factor(am, levels = c(0, 1), labels = c("Automatic", "Manual"))
   )
 
-# Build a quick cross-tabulation confusion matrix to audit results
-confusion_matrix <- table(Actual = evaluation_data$has_churned, Predicted = evaluation_data$predicted_class)
+cat("Raw Vehicle Ledger Profile")
+print(head(cars_df))
 
-print("--- Step 4: Model Confusion Matrix Matrix ---")
+# Fit a logistic model.
+# Target: am (Binary 0/1) | Predictors: wt (Vehicle Weight), hp (Horsepower)
+logistic_model <- glm(am ~ wt + hp, family = binomial(link = "logit"), data = cars_df)
+
+cat("Model Coefficients (Log-Odds Scale)")
+print(summary(logistic_model))
+
+# Exponentiate log-odds to obtain interpretable Odds Ratios (OR) with 95% CIs
+model_odds <- tidy(logistic_model, exponentiate = TRUE, conf.int = TRUE)
+
+cat("Tidy Odds Ratios & 95% Confidence Intervals")
+print(model_odds %>% select(term, estimate, std.error, conf.low, conf.high, p.value))
+
+# Append fitted probabilities and classify using a standard 0.50 threshold
+eval_df <- cars_df %>%
+  mutate(
+    predicted_prob  = predict(logistic_model, type = "response"),
+    predicted_class = if_else(predicted_prob >= 0.50, 1, 0),
+    predicted_label = factor(predicted_class, levels = c(0, 1), labels = c("Automatic", "Manual"))
+  )
+
+# Build Confusion Matrix
+confusion_matrix <- table(Actual = eval_df$transmission, Predicted = eval_df$predicted_label)
+
+cat("Confusion Matrix")
 print(confusion_matrix)
 
-# Calculate baseline prediction accuracy percentage
-accuracy <- sum(diag(confusion_matrix)) / sum(confusion_matrix)
-cat(sprintf("Overall Predictive Accuracy: %.2f%%\n", accuracy * 100))
+# Calculate key performance metrics
+accuracy    <- sum(diag(confusion_matrix)) / sum(confusion_matrix)
+sensitivity <- confusion_matrix["Manual", "Manual"] / sum(confusion_matrix["Manual", ])
+specificity <- confusion_matrix["Automatic", "Automatic"] / sum(confusion_matrix["Automatic", ])
 
-# ==============================================================================
-# End of Day 24 Script
-# ==============================================================================
+cat(sprintf("\nModel Performance Metrics:\n"))
+cat(sprintf("  • Accuracy:    %.2f%%\n", accuracy * 100))
+cat(sprintf("  • Sensitivity: %.2f%%\n", sensitivity * 100))
+cat(sprintf("  • Specificity: %.2f%%\n", specificity * 100))
+
+# 5. Visualize the Sigmoid Decision Curve
+sigmoid_plot <- ggplot(eval_df, aes(x = wt, y = am)) +
+  geom_point(aes(color = transmission), size = 3, alpha = 0.8) +
+  stat_smooth(
+    method      = "glm", 
+    method.args = list(family = "binomial"), 
+    se          = TRUE, 
+    color       = "#2563eb", 
+    fill        = "#bfdbfe"
+  ) +
+  scale_y_continuous(breaks = c(0, 1), labels = c("0 (Automatic)", "1 (Manual)")) +
+  scale_color_manual(values = c("Automatic" = "#dc2626", "Manual" = "#16a34a")) +
+  theme_minimal() +
+  labs(
+    title    = "Logistic Regression Sigmoid Curve",
+    subtitle = "Probability of Manual Transmission as a function of Vehicle Weight",
+    x        = "Vehicle Weight (1,000 lbs)",
+    y        = "Predicted Probability of Manual Transmission",
+    color    = "Actual Class"
+  ) +
+  theme(legend.position = "bottom")
+
+print("Render Sigmoid Curve Plot")
+print(sigmoid_plot)

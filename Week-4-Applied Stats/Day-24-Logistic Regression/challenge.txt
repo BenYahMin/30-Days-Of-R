@@ -1,0 +1,96 @@
+WEEK 3 CAPSTONE CHALLENGE: STATISTICAL INFERENCE & PREDICTIVE MODELING IN R
+
+OVERVIEW:
+This capstone challenge will evaluate everything we learnt in week 3, i.e ability 
+to explore, model, and interpret data using R. 
+You will work through descriptive statistics, hypothesis testing, ANOVA, 
+linear regression, multiple linear regression, and logistic regression.
+
+1. DESCRIPTIVE STATS
+
+Dataset: Built-in mtcars(or iris / mpg where required).
+
+1. Calculate central tendency and dispersion metrics for vehicle fuel efficiency (mpg):
+   - Mean, Median, Standard Deviation, and Interquartile Range (IQR).
+2. Compute group-wise summary statistics of mpg grouped by transmission type (am: 0 = Automatic, 1 = Manual).
+3. Identify potential numeric outliers in vehicle weight (wt) using the 1.5 * IQR rule.
+
+Deliverables:
+- A clean summary table printed to the console using dplyr::summarise().
+- A concise commentary on whether mpg is skewed or normally distributed.
+
+2. HYPOTHESIS testing
+
+Target Variable: mpg across Transmission Groups (am)
+
+1. State the Null ($H_0$) and Alternative ($H_1$) hypotheses regarding average 
+   fuel efficiency between automatic and manual vehicles.
+2. Conduct an independent two-sample t-test (t.test()) comparing mpg between 
+   am == 0 and am == 1.
+3. Check for equality of variance before interpreting the test output.
+
+Deliverables:
+- Report the t-statistic, degrees of freedom, and p-value.
+- Write a 1-sentence decision on whether to reject or fail to reject $H_0$ at $\alpha = 0.05$.
+
+3. ANOVA
+
+Target Dataset: Built-in PlantGrowth (or mtcars with cyl as a factor)
+
+1. Formulate a one-way ANOVA model (aov()) to test if mean plant weight 
+   differs across the three experimental treatment groups (group).
+2. Generate the ANOVA summary table and evaluate the F-statistic and p-value.
+3. If significant ($p < 0.05$), run Tukey’s Honest Significant Difference (TukeyHSD()) 
+   post-hoc test to pinpoint which specific pair(s) of groups differ.
+
+Deliverables:
+- ANOVA table output.
+- Post-hoc pairwise comparison summary highlighting statistically significant pairs.
+
+4. SIMPLE LINEAR REGRESSION
+
+Target Dataset: mtcars
+
+1. Fit a simple linear regression model (lm()) predicting fuel efficiency (mpg) 
+   from vehicle weight (wt).
+2. Extract the model intercept, slope coefficient ($\beta_1$), and $R^2$ value.
+3. Interpret the slope coefficient in plain business/analytical language: 
+   "For every 1,000 lbs increase in weight, MPG changes by..."
+
+Deliverables:
+- Model output summary (summary(model)).
+- Plain-language explanation of $\beta_1$ and $R^2$.
+
+5. MULTIPLE LINEAR REGRESSION
+
+Target Dataset: mtcars
+
+1. Expand your regression model to include multiple predictors:
+   Predict mpg using wt (weight), hp (horsepower), and qsec (1/4 mile time).
+2. Compare the Adjusted $R^2$ of the multiple regression model against the simple model.
+3. Evaluate predictor significance via p-values ($\alpha = 0.05$).
+4. Check regression assumptions using standard diagnostic plots (plot(model)):
+   - Residuals vs Fitted (Linearity / Homoscedasticity)
+   - Normal Q-Q plot (Normality of residuals)
+
+Deliverables:
+- Multiple regression summary with Adjusted $R^2$.
+- Brief statement identifying which predictor has the strongest effect on mpg.
+
+6. LOGISTIC REGRESSION
+
+Target Dataset: mtcars
+
+1. Fit a binary logistic regression model (glm(), family = binomial) predicting 
+   transmission type (am: 0 = Automatic, 1 = Manual) using wt and hp.
+2. Convert raw model log-odds coefficients into Odds Ratios (exp(coef(model))) 
+   and interpret the odds ratio for wt.
+3. Predict fitted probabilities (type = "response") and assign predicted class labels 
+   using a 0.50 probability cutoff threshold.
+4. Construct a 2x2 Confusion Matrix (table()) and calculate total classification Accuracy.
+
+Deliverables:
+- Logistic regression summary table with Odds Ratios.
+- Confusion matrix and overall predictive accuracy percentage.
+
+NOTE: The solution to this exercise is labelled as solutions/Day-24-Logistic Regression Solution.R
