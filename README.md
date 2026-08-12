@@ -45,6 +45,7 @@ This interactive table tracks my daily progress. Click on any active day to view
 Each daily directory follows a strict layout containing:
 * **A detailed `README.md`** breaking down the daily theoretical concepts, core rules, statistical formulas, and architectural pitfalls.
 * **An executable `.R` script** (`main.R` or `app.R`) featuring fully documented sample code, mock data pipelines, deep-dive comments, and practice challenges.
+* **Challenge `Day-x-challenge.txt`** at the end of a couple of weeks is an exercise you can try with the respective solution in the solutions folder.
 
 ### Working with the code locally:
 To clone this repository and run the scripts in your R environment:
