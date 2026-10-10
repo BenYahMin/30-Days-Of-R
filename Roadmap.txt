@@ -2,7 +2,7 @@
 30 DAYS OF R: CHALLENGE ROADMAP & PROGRESS LOG
 ==============================================================================
 
-[X] WEEK 1: CORE FUNDAMENTALS & DATA STRUCTURES
+ WEEK 1: CORE FUNDAMENTALS & DATA STRUCTURES
 ------------------------------------------------------------------------------
 ├── Day 01: Introduction & Basic Arithmetic Operations
 ├── Day 02: Primitive Vectors & C-Combine Architectures
@@ -12,46 +12,39 @@
 ├── Day 06: Control Flow & Conditional Logic
 └── Day 07: Writing Custom Functions
 
-[X] WEEK 2: WRANGLING & DATA EXPLORATION
+ WEEK 2: WRANGLING & DATA EXPLORATION
 ------------------------------------------------------------------------------
 ├── Day 08: Missing Data Handling
 ├── Day 09: Reshaping & Pivoting
 ├── Day 10: Relational Joins & Merges
-├── Day 11: Text Manipulation                 --> [Week-2-Wrangling\Day-11-Text Manipulation]
-├── Day 12: Datetime Wrangling                --> [Week-2-Wrangling\Day-12-Datetime Wrangling]
+├── Day 11: Text Manipulation                 
+├── Day 12: Datetime Wrangling                
 
-[ ] WEEK 3: VISUALIZATION EXTENSIONS
+ WEEK 3: VISUALIZATION EXTENSIONS
 ------------------------------------------------------------------------------
-├── Day 13: Ggplot Foundations                --> [Week-2-Wrangling\Day-13-Ggplot Foundations]
-├── Day 14: Visualizing Distributions         --> [Week-2-Wrangling\Day-14-Visualizing Distributions]
-├── Day 15: Polished Plots                    --> [Week-2-Wrangling\Day-15-Polished Plots]
-├── Day 16: Faceted Visualizations            --> [Week-2-Wrangling\Day-16-Faceted Visualizations]
-├── Day 17: Interactive Charts                --> [Week-3-Visualization\Day-17-Interactive Charts]
-└── Day 18: EDA Project                       --> [Week-2-Wrangling\Day-18-EDA Project]
+├── Day 13: Ggplot Foundations             
+├── Day 14: Visualizing Distributions         
+├── Day 15: Polished Plots                    
+├── Day 17: Interactive Charts                
+└── Day 18: EDA Project                       
 
-[ ] WEEK 4: APPLIED STATS
+ WEEK 4: APPLIED STATS
 ------------------------------------------------------------------------------
-├── Day 19: Descriptive Stats                 --> [Week-4-Applied Stats\Day-19-Descriptive Stats]
-├── Day 20: Hypothesis Testing                --> [Week-4-Applied Stats\Day-20-Hypothesis Testing]
-├── Day 21: ANOVA Models                      --> [Week-4-Applied Stats\Day-21-ANOVA Models]
-├── Day 22: Simple Regression                 --> [Week-4-Applied Stats\Day-22-Simple Regression]
-├── Day 23: Multiple Regression               --> [Week-4-Applied Stats\Day-23-Multiple Regression]
-└── Day 24: Logistic Regression               --> [Week-4-Applied Stats\Day-24-Logistic Regression]
+├── Day 19: Descriptive Stats        
+├── Day 20: Hypothesis Testing               
+├── Day 21: Anova Models           
+├── Day 22: Simple Regression                 
+├── Day 23: Multiple Regression             
+└── Day 24: Logistic Regression              
 
-[ ] WEEK 5: CAPSTONE PROJECTS
+ WEEK 5: CAPSTONE PROJECTS
 ------------------------------------------------------------------------------
-├── Capstone 1: Data Story                    --> [Week-5-Capstones\Capstone-1-Data Story]
-└── Capstone 2: Shiny App                     --> [Week-5-Capstones\Capstone-2-Shiny App]
+├── Capstone 1: Data Story               
+└── Capstone 2: Shiny App                    
 
-==============================================================================
-FILE INDEX & EXPECTED STRUCTURE PER TRACK
-==============================================================================
+
 Each active day directory expects the following baseline structure:
   ├── README.md  (Theoretical summary, formulas, functions index, and tasks)
   └── main.R     (Executable script file containing examples and mock data)
   * Exception: Capstone 2 utilizes `app.R` for the Shiny engine instead of `main.R`.
     and every last day of the week has a challenge file- challenge.txt
-
-==============================================================================
-End of Roadmap Log * Subject to revision
-==============================================================================
