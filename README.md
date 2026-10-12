@@ -10,7 +10,7 @@ The curriculum scales progressively—starting with foundational syntax, moving 
 
 This interactive table tracks my daily progress. Click on any active day to view either the theoretical **Markdown Guide** or the raw, executable **R Script**.
 
-| Day | Topic | Documentation | Code | Status |
+| Day | Topic | Documentation | Code | 
 | :---: | :--- | :---: | :---: | :---: |
 | **01** | Introduction to R, RStudio, and basic arithmetic operations | [Notes](./Week-1-Core-Fundamentals%20%24%20Data%20Structures/Day-1-Introduction%20to%20R%2C%20RStudio%2C%20and%20basic%20arithmetic%20operations/README.md) | [script.R](./Week-1-Core-Fundamentals%20%24%20Data%20Structures/Day-1-Introduction%20to%20R%2C%20RStudio%2C%20and%20basic%20arithmetic%20operations/script.R) |  
 | **02** | Vectors: Creation, type coercion rules, and element-wise math | [Notes](./Week-1-Core-Fundamentals%20%24%20Data%20Structures/Day-2-Understanding%20Vectors%20creation%2C%20type%20coercion%20rules%2C%20and%20element-wise%20math/README.md) | [script.R](./Week-1-Core-Fundamentals%20%24%20Data%20Structures/Day-2-Understanding%20Vectors%20creation%2C%20type%20coercion%20rules%2C%20and%20element-wise%20math/script.R) |  
