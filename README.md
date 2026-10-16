@@ -6,9 +6,7 @@ The curriculum scales progressively—starting with foundational syntax, moving 
 
 ---
 
-## 🗺️ Progress Dashboard & Roadmap
-
-This interactive table tracks my daily progress. Click on any active day to view either the theoretical **Markdown Guide** or the raw, executable **R Script**.
+## Dashboard & Roadmap
 
 | Day | Topic | Documentation | Code | 
 | :---: | :--- | :---: | :---: | 
